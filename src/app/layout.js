@@ -48,7 +48,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${cinzel.variable} ${inter.variable} dark scroll-smooth`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
