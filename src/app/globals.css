@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FDFBF7;
+  --bg-secondary: #F5EFEB;
+  --text-primary: #3B020A;
+  --text-secondary: #5B0612;
+  --gold-accent: #D4AF37;
+  --card-bg: rgba(253, 251, 247, 0.8);
+  --card-border: rgba(212, 175, 55, 0.2);
+}
+
+.dark {
+  --bg-primary: #141210;
+  --bg-secondary: #1C1917;
+  --text-primary: #FDFBF7;
+  --text-secondary: #F5EFEB;
+  --gold-accent: #D4AF37;
+  --card-bg: rgba(28, 25, 23, 0.7);
+  --card-border: rgba(212, 175, 55, 0.3);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom Luxury Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold-accent), #AA7C11);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-panel-gold {
+  background: rgba(212, 175, 55, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.1);
+}
+
+.glass-panel-maroon {
+  background: rgba(128, 0, 32, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 30px rgba(128, 0, 32, 0.15);
+}
+
+/* Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0F2 0%, #D4AF37 50%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-luxury {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Keyframes and custom animations */
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal {
+  position: absolute;
+  top: -10vh;
+  pointer-events: none;
+  animation: petal-fall 10s linear infinite;
+}
+
+/* Lantern animation */
+@keyframes lantern-rise {
+  0% {
+    transform: translateY(105vh) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-5vh) translateX(var(--lantern-drift, 40px)) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.lantern {
+  position: absolute;
+  bottom: -5vh;
+  pointer-events: none;
+  animation: lantern-rise 15s linear infinite;
+}

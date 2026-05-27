@@ -1,0 +1,22 @@
+{
+  "name": "Rahul & Priya Wedding Invitation",
+  "short_name": "R & P Wedding",
+  "description": "Premium Digital Wedding Invitation for Rahul & Priya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFBF7",
+  "theme_color": "#800020",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3656/3656836.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3656/3656836.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
